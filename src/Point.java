@@ -22,34 +22,38 @@ public class Point {
 
     public int getY(){return y;}
 
-    public void setX(int newX) {x = newX}
+    public void setX(int newX) {x = newX;}
 
-    public void setY(int newY) {y = newY}
+    public void setY(int newY) {y = newY;}
 
-   // public int coordinate() {return "(x, y)";}
-    //System.out.println("(" + x + ", " + y + ")")
+    public String coordinate() {
+        return "(" + x + ", " + y + ")";
+    }
 
-    public int quadrant(){
+
+
+    public String quadrant(){
+        String quadrant;
         if( x < 0 && y > 0) {
-            return "II"
-    } else if () {
+            quadrant = "II";
+        } else if (x<0 && y<0) {
+            quadrant = "III";
+        } else if (x> 0 && y > 0) {
+            quadrant = "I";
 
-        } else if () {
+        } else if (x > 0 && y < 0) {
+            quadrant = "IV";
 
-        } (x<0 && y<0) {
-            return "III"
-        }
-        if(x> 0 && y > 0) {
-            return "I"
-        }
-        if( x > 0 && y < 0) {
-            return "IV"
-        }
-        if(x==0 && y==0){
-            return "axis"
-        }
-        else(x==0 || y==0) {
-            return "on an axis"
-        }
+        } else if (x==0 && y==0) {
+            quadrant = "axis";
 
-}
+        } else {
+            quadrant = "on an axis";
+
+        }
+        return quadrant;
+    }
+    }
+
+
+
